@@ -3,17 +3,25 @@
    ========================= */
 
 :root{
-  --primary: #0d6efd; /* azul Bootstrap */
-  --text: #111111;    /* texto negro */
-  --bg: #ffffff;      /* fondo blanco */
+  --primary: #0d6efd;
+  --text: #111111;
+  --bg: #ffffff;
   --muted: #6c757d;
   --soft: #f8f9fa;
+
+  /* 👇 Clave: sobreescribe la fuente base de Bootstrap */
+  --bs-body-font-family: "Montserrat", system-ui, -apple-system, "Segoe UI",
+                         Roboto, "Helvetica Neue", Arial, "Noto Sans",
+                         "Liberation Sans", sans-serif;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.6;
 }
 
 html, body {
   background: var(--bg);
   color: var(--text);
   scroll-behavior: smooth;
+  font-family: var(--bs-body-font-family);
 }
 
 h1, h2, h3, .h1, .h2, .h3 {
