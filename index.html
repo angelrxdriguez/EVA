@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aplicación IA de RRHH — Preselección de Candidatos</title>
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link href="styles.css" rel="stylesheet">
+
+  <meta name="description" content="Sube CVs en PDF, define la oferta y deja que la IA preseleccione y explique por qué elige a cada candidato." />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">
+        <i class="bi bi-stars me-2"></i>IA de RRHH
+      </a>
+      <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">Cómo funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subida">Subir CVs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary px-3" href="#contacto">
+              <i class="bi bi-rocket-takeoff me-1"></i> Probar ahora
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero position-relative overflow-hidden">
+    <div class="container position-relative">
+      <div class="row align-items-center py-5 py-md-6">
+        <div class="col-lg-6">
+          <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill mb-3">
+            <i class="bi bi-lightning-charge-fill me-1"></i> MVP listo para crecer
+          </span>
+          <h1 class="display-5 fw-extrabold lh-tight mb-3">
+            Preselección de candidatos <span class="d-inline-block hero-underline">en minutos</span> con IA
+          </h1>
+          <p class="lead text-body">
+            Describe el puesto, sube los CVs en PDF y obtén un <strong>Top de candidatos</strong> con explicaciones claras, revisión ciega opcional y foco en requisitos.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a class="btn btn-primary btn-lg" href="#subida"><i class="bi bi-cloud-arrow-up me-2"></i>Subir CVs</a>
+            <a class="btn btn-outline-primary btn-lg" href="#demo"><i class="bi bi-eye me-2"></i>Ver demo</a>
+          </div>
+
+          <ul class="list-unstyled d-flex flex-wrap gap-4 mt-4 text-body">
+            <li><i class="bi bi-shield-lock me-2 text-primary"></i>RGPD-friendly</li>
+            <li><i class="bi bi-check2-circle me-2 text-primary"></i>Explicabilidad</li>
+            <li><i class="bi bi-speedometer2 me-2 text-primary"></i>Rápido y simple</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="hero-card shadow-sm rounded-4 p-4 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-circle me-3"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <h3 class="h4 mb-0">Oferta: Desarrollador/a Full-Stack</h3>
+                <small class="text-muted">Ejemplo de vista previa</small>
+              </div>
+            </div>
+            <ul class="mb-4 text-body">
+              <li><strong>Must-haves:</strong> JavaScript, Node/Next, SQL</li>
+              <li><strong>Nice-to-haves:</strong> Docker, AWS, IA</li>
+              <li><strong>Idioma:</strong> Inglés B2</li>
+            </ul>
+            <div class="d-flex gap-2">
+              <span class="badge rounded-pill text-bg-primary-subtle">Revisión ciega</span>
+              <span class="badge rounded-pill text-bg-primary-subtle">Pesos ajustables</span>
+              <span class="badge rounded-pill text-bg-primary-subtle">Evidencias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Métricas -->
+      <div class="row g-4 mt-3">
+        <div class="col-6 col-md-4">
+          <div class="metric border rounded-4 p-4">
+            <div class="h2 text-primary mb-0">+200</div>
+            <small class="text-body-secondary">CVs por lote (sugerido)</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="metric border rounded-4 p-4">
+            <div class="h2 text-primary mb-0">~5 min</div>
+            <small class="text-body-secondary">de criba inicial</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="metric border rounded-4 p-4">
+            <div class="h2 text-primary mb-0">100%</div>
+            <small class="text-body-secondary">explicabilidad visible</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decoración -->
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+  </header>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="py-6 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">¿Cómo funciona?</h2>
+        <p class="text-body">Cuatro pasos para pasar de una pila de CVs a un shortlist accionable.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100">
+            <span class="step-index">1</span>
+            <div class="step-icon"><i class="bi bi-pencil-square"></i></div>
+            <h3 class="h5">Define la oferta</h3>
+            <p>Describe el puesto, añade must-haves y nice-to-haves. Configura pesos.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100">
+            <span class="step-index">2</span>
+            <div class="step-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+            <h3 class="h5">Sube los CVs</h3>
+            <p>Arrastra PDFs (o ZIP). Detección de duplicados y lectura automática.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100">
+            <span class="step-index">3</span>
+            <div class="step-icon"><i class="bi bi-cpu"></i></div>
+            <h3 class="h5">IA puntúa</h3>
+            <p>La IA analiza requisitos y experiencia, y ordena por ajuste semántico.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100">
+            <span class="step-index">4</span>
+            <div class="step-icon"><i class="bi bi-list-check"></i></div>
+            <h3 class="h5">Top con evidencias</h3>
+            <p>Shortlist con explicación y fragmentos del CV que la justifican.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBIDA DE CVS -->
+  <section id="subida" class="py-6 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Sube tus CVs</h2>
+          <p class="text-body">Zona de subida (demo). En el producto real, aquí se envía a tu backend/IA.</p>
+
+          <form class="upload-box border-dashed rounded-4 p-4 bg-white" aria-label="Formulario de subida de CVs (demo)">
+            <div class="text-center">
+              <i class="bi bi-file-earmark-pdf display-5 text-primary d-block mb-2"></i>
+              <p class="mb-2"><strong>Arrastra y suelta</strong> tus PDFs aquí</p>
+              <p class="text-body-secondary small">o haz clic para seleccionar archivos</p>
+              <label class="btn btn-outline-primary mt-2">
+                <input type="file" class="visually-hidden" accept=".pdf" multiple>
+                Seleccionar archivos
+              </label>
+            </div>
+          </form>
+
+          <div class="mt-3 small text-body-secondary">
+            <i class="bi bi-shield-lock me-1"></i> Los archivos no se envían realmente en esta demo.
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="feature-card p-4">
+            <div class="d-flex align-items-start">
+              <div class="me-3 text-primary fs-3"><i class="bi bi-eye-slash"></i></div>
+              <div>
+                <h3 class="h5 mb-1">Revisión ciega</h3>
+                <p class="mb-0 text-body">Oculta nombre y foto en la primera pasada para reducir sesgos.</p>
+              </div>
+            </div>
+            <hr>
+            <div class="d-flex align-items-start">
+              <div class="me-3 text-primary fs-3"><i class="bi bi-graph-up"></i></div>
+              <div>
+                <h3 class="h5 mb-1">Pesos ajustables</h3>
+                <p class="mb-0 text-body">Prioriza requisitos críticos según tu contexto.</p>
+              </div>
+            </div>
+            <hr>
+            <div class="d-flex align-items-start">
+              <div class="me-3 text-primary fs-3"><i class="bi bi-journal-text"></i></div>
+              <div>
+                <h3 class="h5 mb-1">Evidencias</h3>
+                <p class="mb-0 text-body">Cada puntuación se explica con fragmentos del CV.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </section>
+
+  <!-- DEMO DE RANKING -->
+  <section id="demo" class="py-6 bg-white">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Demo de ranking</h2>
+        <p class="text-body">Ejemplo estático de cómo se ve el Top de candidatos (datos ficticios).</p>
+      </div>
+
+      <div class="table-responsive rounded-4 border bg-white">
+        <table class="table align-middle mb-0">
+          <thead class="table-primary">
+            <tr>
+              <th>Pos.</th>
+              <th>Candidato</th>
+              <th>Puntuación</th>
+              <th>Must-haves</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank-dot bg-primary"></span>1</td>
+              <td>
+                <strong>Patricia Gómez</strong><br>
+                <small class="text-body-secondary">Full-Stack | 5 años</small>
+              </td>
+              <td style="min-width:220px;">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="progress flex-grow-1" style="height:8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 92%;" aria-label="Puntuación 92%"></div>
+                  </div>
+                  <span class="fw-semibold text-primary">92</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">JavaScript</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">Node/Next</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">SQL</span>
+              </td>
+              <td>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#evidenciaModal" aria-label="Ver evidencias de Patricia">
+                  <i class="bi bi-search"></i> Ver evidencias
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="rank-dot bg-primary"></span>2</td>
+              <td>
+                <strong>Diego Santos</strong><br>
+                <small class="text-body-secondary">Back-End | 6 años</small>
+              </td>
+              <td>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="progress flex-grow-1" style="height:8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 84%;" aria-label="Puntuación 84%"></div>
+                  </div>
+                  <span class="fw-semibold text-primary">84</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">Node</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">SQL</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">Docker</span>
+              </td>
+              <td>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#evidenciaModal">
+                  <i class="bi bi-search"></i> Ver evidencias
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="rank-dot bg-primary"></span>3</td>
+              <td>
+                <strong>Ana Fernández</strong><br>
+                <small class="text-body-secondary">Front-End | 4 años</small>
+              </td>
+              <td>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="progress flex-grow-1" style="height:8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 79%;" aria-label="Puntuación 79%"></div>
+                  </div>
+                  <span class="fw-semibold text-primary">79</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">JavaScript</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">React</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis me-1">UI</span>
+              </td>
+              <td>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#evidenciaModal">
+                  <i class="bi bi-search"></i> Ver evidencias
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal de evidencias (demo) -->
+      <div class="modal fade" id="evidenciaModal" tabindex="-1" aria-labelledby="evidenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <div class="modal-content rounded-4">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-primary" id="evidenciaModalLabel"><i class="bi bi-journal-text me-2"></i>Evidencias del candidato</h5>
+              <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p class="mb-2 text-body"><strong>Requisitos cumplidos:</strong> JavaScript, Node, SQL</p>
+              <p class="mb-3 text-body"><strong>Fragmentos del CV:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">“Lideré migración a <strong>Next.js</strong> con SSR en 2023 …”</li>
+                <li class="list-group-item">“Diseñé y optimicé consultas <strong>SQL</strong> para reporting …”</li>
+                <li class="list-group-item">“APIs en <strong>Node.js</strong> con testing y CI/CD …”</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Pre-seleccionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="py-6 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="benefit h-100">
+            <div class="benefit-icon"><i class="bi bi-eye"></i></div>
+            <h3 class="h5">Transparente</h3>
+            <p class="mb-0 text-body">Explicaciones legibles con citas del propio CV para cada decisión.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="benefit h-100">
+            <div class="benefit-icon"><i class="bi bi-shield-check"></i></div>
+            <h3 class="h5">Enfocada y justa</h3>
+            <p class="mb-0 text-body">Evalúa competencias y requisitos; revisión ciega opcional.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="benefit h-100">
+            <div class="benefit-icon"><i class="bi bi-clock-history"></i></div>
+            <h3 class="h5">Ahorra tiempo</h3>
+            <p class="mb-0 text-body">De horas a minutos en la criba inicial de cada oferta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="precios" class="py-6 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Precios</h2>
+        <p class="text-body">Empieza gratis. Escala cuando lo necesites.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="price-card h-100">
+            <h3 class="h5 text-primary">Gratis</h3>
+            <div class="display-6 fw-bold mb-2">0€</div>
+            <ul class="list-unstyled text-body">
+              <li><i class="bi bi-check2 text-primary me-2"></i>Hasta 50 CVs/mes</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Ranking básico</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Modal de evidencias</li>
+            </ul>
+            <a class="btn btn-outline-primary w-100 mt-3" href="#contacto">Empezar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="price-card h-100 featured">
+            <div class="ribbon">Recomendado</div>
+            <h3 class="h5 text-primary">Pro</h3>
+            <div class="display-6 fw-bold mb-2">19€</div>
+            <ul class="list-unstyled text-body">
+              <li><i class="bi bi-check2 text-primary me-2"></i>Hasta 500 CVs/mes</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Revisión ciega</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Pesos ajustables</li>
+            </ul>
+            <a class="btn btn-primary w-100 mt-3" href="#contacto">Probar Pro</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="price-card h-100">
+            <h3 class="h5 text-primary">Empresa</h3>
+            <div class="display-6 fw-bold mb-2">A medida</div>
+            <ul class="list-unstyled text-body">
+              <li><i class="bi bi-check2 text-primary me-2"></i>Integraciones (ATS, SSO)</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Soporte dedicado</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>SLAs y auditoría</li>
+            </ul>
+            <a class="btn btn-outline-primary w-100 mt-3" href="#contacto">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-6 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Preguntas frecuentes</h2>
+        <p class="text-body">Algunas dudas comunes sobre la criba con IA.</p>
+      </div>
+
+      <div class="accordion" id="faqAcc">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+              ¿Se guardan los CVs?
+            </button>
+          </h2>
+        </div>
+        <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            En la demo no se sube nada. En el producto, puedes almacenar localmente o en la nube con políticas claras de retención y borrado.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+              ¿Cómo evita sesgos?
+            </button>
+          </h2>
+          <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Revisión ciega, enfoque en requisitos y auditoría de decisiones (explicaciones y evidencias).
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+              ¿Necesito IA de pago?
+            </button>
+          </h2>
+          <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Puedes empezar con lógica básica; cuando quieras mejor precisión y explicación, activas un modelo (Gemini/OpenAI).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-6 bg-white">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">¿Hablamos?</h2>
+          <p class="text-body">Cuéntanos tu caso y te ayudamos a adaptar la criba a tu flujo de contratación.</p>
+          <form class="contact-card">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Tu nombre">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="tu@email.com">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="4" placeholder="Cuéntanos brevemente tu necesidad…"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="button" class="btn btn-primary w-100">
+                  <i class="bi bi-send me-2"></i>Enviar mensaje
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="map-placeholder rounded-4 p-4">
+            <h3 class="h6 text-primary">Ubicación</h3>
+            <p class="mb-0 text-body">Remoto • España</p>
+            <hr>
+            <p class="small text-body-secondary mb-1">
+              Esta es una sección de ejemplo. Aquí podrías incrustar un mapa o tus datos de contacto ampliados.
+            </p>
+            <div class="d-flex gap-3 mt-3">
+              <a class="btn btn-outline-primary btn-sm" href="#"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+              <a class="btn btn-outline-primary btn-sm" href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+              <a class="btn btn-outline-primary btn-sm" href="#"><i class="bi bi-envelope me-1"></i>Email</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="small text-body-secondary">© <span id="year"></span> IA de RRHH · Hecho con ♥</div>
+      <ul class="list-inline m-0 small">
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Privacidad</a></li>
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Términos</a></li>
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (para navbar/accordion/modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Año dinámico (opcional, puro HTML+CSS funcional sin esto) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
