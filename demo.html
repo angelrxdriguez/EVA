@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EVA &middot; Evaluaci&oacute;n de Vacantes Asistida con IA</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+  <link href="style.css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <meta name="theme-color" content="#0d6efd" />
+  <meta name="description" content="EVA transforma la lectura de CVs con inteligencia artificial explicable. Genera rankings auditables, elimina sesgos y acelera la preselecci&oacute;n para cada vacante." />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top" aria-label="Men&uacute; principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#">
+        <span class="brand-mark rounded-3"><i class="bi bi-stars"></i></span>
+        <span>EVA<span class="d-none d-sm-inline text-muted"> &mdash; Evaluaci&oacute;n de Vacantes Asistida con IA</span></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegaci&oacute;n">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">C&oacute;mo funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subida">Subida inteligente</a></li>
+          <li class="nav-item"><a class="nav-link active" href="demo.html">Demo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary px-3" href="#contacto"><i class="bi bi-rocket-takeoff me-2"></i>Probar ahora</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero demo-hero position-relative overflow-hidden">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="hero-pill text-uppercase fw-semibold">Demo en vivo &middot; Carga asistida</span>
+            <h1 class="hero-title display-4 fw-bold mt-3">Sube tus CVs en PDF y obt&eacute;n insights inmediatos</h1>
+            <p class="hero-lead lead text-secondary mt-3">Arrastra CVs en PDF, deja que EVA los anonimize y genera un ranking explicable en minutos. Dise&ntilde;ado para recruiters que necesitan trazabilidad y velocidad.</p>
+            <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-primary btn-lg shadow-lg" href="#upload"><i class="bi bi-cloud-arrow-up me-2"></i>Probar carga inteligente</a>
+              <a class="btn btn-outline-primary btn-lg" href="#flujo"><i class="bi bi-clipboard-check me-2"></i>Ver flujo sugerido</a>
+            </div>
+            <div class="hero-proof d-flex flex-wrap gap-3 mt-5">
+              <div class="stat-chip">
+                <span class="stat-number">20 CVs</span>
+                <span class="stat-label">procesados por tanda</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-number">&lt; 4&nbsp;min</span>
+                <span class="stat-label">para obtener shortlist</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">trazabilidad de criterios</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 offset-lg-1">
+            <div class="demo-hero-card p-4 p-lg-5 rounded-4 shadow-lg">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <span class="badge rounded-pill text-bg-primary text-uppercase">EVA Score</span>
+                <span class="demo-hero-percent fw-bold display-6 mb-0">92</span>
+              </div>
+              <ul class="list-unstyled d-grid gap-4 mb-4">
+                <li class="demo-hero-highlight d-flex gap-3">
+                  <span class="demo-hero-icon"><i class="bi bi-person-vcard"></i></span>
+                  <div>
+                    <h3 class="h6 mb-1">Anonimizaci&oacute;n instant&aacute;nea</h3>
+                    <p class="text-muted mb-0">Elimina nombre, foto y datos sensibles antes de compartir con hiring managers.</p>
+                  </div>
+                </li>
+                <li class="demo-hero-highlight d-flex gap-3">
+                  <span class="demo-hero-icon"><i class="bi bi-funnel"></i></span>
+                  <div>
+                    <h3 class="h6 mb-1">Rankings auditables</h3>
+                    <p class="text-muted mb-0">Cada criterio se traduce en evidencias para justificar la posici&oacute;n del CV.</p>
+                  </div>
+                </li>
+                <li class="demo-hero-highlight d-flex gap-3">
+                  <span class="demo-hero-icon"><i class="bi bi-lightning-charge"></i></span>
+                  <div>
+                    <h3 class="h6 mb-1">Recomendaciones accionables</h3>
+                    <p class="text-muted mb-0">Sugiere preguntas de entrevista y follow-ups alineados al perfil.</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="demo-hero-footer d-flex align-items-center gap-3">
+                <div class="avatar-stack">
+                  <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&amp;fit=crop&amp;w=80&amp;q=60" alt="People leader" loading="lazy" />
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=80&amp;q=60" alt="Recruiter" loading="lazy" />
+                  <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&amp;fit=crop&amp;w=80&amp;q=60" alt="HR business partner" loading="lazy" />
+                </div>
+                <p class="text-muted small mb-0">Recruiters de retail, tech y banca ya validaron esta demo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upload" class="section py-6 bg-soft">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-7">
+            <form class="upload-card p-4 p-lg-5 bg-white shadow-sm border rounded-4" action="#" novalidate>
+              <div class="upload-card-header d-flex gap-3 align-items-start mb-4">
+                <span class="badge rounded-pill text-bg-light text-uppercase">Beta</span>
+                <div>
+                  <h2 class="h3 mb-1">Carga tus CVs en segundos</h2>
+                  <p class="text-muted mb-0">Aceptamos archivos PDF. EVA limpia datos sensibles y extrae skills automatizadas para tu shortlist.</p>
+                </div>
+              </div>
+
+              <input type="file" class="visually-hidden" id="cvFiles" name="cvFiles" accept="application/pdf,.pdf" multiple />
+
+              <label class="upload-dropzone" id="uploadDropzone" for="cvFiles" role="button" tabindex="0" aria-describedby="uploadGuidelines">
+                <span class="upload-dropzone-icon"><i class="bi bi-cloud-arrow-up"></i></span>
+                <strong>Arrastra y suelta los CVs en PDF aqu&iacute;</strong>
+                <p class="text-muted mb-0">O haz clic para seleccionar desde tu ordenador.</p>
+                <span class="btn btn-primary btn-lg mt-4">Elegir archivos</span>
+                <p class="small text-muted mt-3" id="uploadGuidelines">Hasta 20 archivos. Tama&ntilde;o m&aacute;ximo: 10&nbsp;MB por documento.</p>
+              </label>
+
+              <div class="upload-file-list mt-4" id="fileList" aria-live="polite"></div>
+              <div id="uploadFeedback" class="upload-feedback text-warning small mt-3 d-none" role="status"></div>
+
+              <div class="d-flex flex-wrap gap-3 align-items-center mt-4">
+                <button type="button" class="btn btn-primary btn-lg" id="startUpload" disabled><i class="bi bi-play-circle me-2"></i>Analizar CVs</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" id="loadSample"><i class="bi bi-magic me-2"></i>Cargar ejemplo</button>
+                <p class="text-muted small mb-0 flex-grow-1">La demo procesa archivos en memoria. No almacenamos nada en servidores.</p>
+              </div>
+
+              <div class="upload-policies border-top pt-4 mt-4">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <p class="small text-muted mb-0"><i class="bi bi-shield-lock text-primary me-2"></i>Cifrado en tr&aacute;nsito y borrado autom&aacute;tico tras 30 minutos.</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="small text-muted mb-0"><i class="bi bi-chat-dots text-primary me-2"></i>Comparte hallazgos con tu equipo mediante un enlace seguro.</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-5">
+            <div class="upload-highlights p-4 p-lg-5 bg-white border rounded-4 shadow-sm h-100">
+              <h3 class="h4 mb-4">Checklist antes de subir</h3>
+              <div class="d-grid gap-4">
+                <div class="upload-feature d-flex gap-3">
+                  <span class="upload-feature-icon"><i class="bi bi-list-check"></i></span>
+                  <div>
+                    <h4 class="h6 mb-1">Criterios definidos</h4>
+                    <p class="text-muted mb-0">Selecciona skills obligatorios, seniority y tipo de contrato para que la IA punt&uacute;e con precisi&oacute;n.</p>
+                  </div>
+                </div>
+                <div class="upload-feature d-flex gap-3">
+                  <span class="upload-feature-icon"><i class="bi bi-robot"></i></span>
+                  <div>
+                    <h4 class="h6 mb-1">Uso de IA explicable</h4>
+                    <p class="text-muted mb-0">Cada recomendaci&oacute;n genera evidencias y citas destacadas del CV.</p>
+                  </div>
+                </div>
+                <div class="upload-feature d-flex gap-3">
+                  <span class="upload-feature-icon"><i class="bi bi-people"></i></span>
+                  <div>
+                    <h4 class="h6 mb-1">Colaboraci&oacute;n segura</h4>
+                    <p class="text-muted mb-0">Invita a hiring managers a revisar el shortlist con permisos controlados.</p>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-4" />
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-file-earmark-arrow-down text-primary fs-4"></i>
+                <div class="small text-muted">Descarga reportes consolidados en PDF o exporta a tu ATS en CSV.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flujo" class="section py-6">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-4">
+            <h2 class="section-title">Flujo recomendado</h2>
+            <p class="section-lead text-muted">Integra EVA en tu proceso actual en tres pasos. Mant&eacute;n trazabilidad y ahorra tiempo desde la primera tanda.</p>
+            <a class="btn btn-link px-0 mt-3" href="#upload"><i class="bi bi-arrow-up-right me-2"></i>Volver a la carga de CVs</a>
+          </div>
+          <div class="col-lg-8">
+            <div class="upload-steps d-grid gap-4">
+              <div class="upload-step-item d-flex gap-4 align-items-start">
+                <span class="upload-step-number">1</span>
+                <div>
+                  <h3 class="h5 mb-1">Configura los criterios y pesos</h3>
+                  <p class="text-muted mb-0">Define competencias clave, certificaciones deseadas y condiciones excluyentes. EVA genera plantillas reusables.</p>
+                </div>
+              </div>
+              <div class="upload-step-item d-flex gap-4 align-items-start">
+                <span class="upload-step-number">2</span>
+                <div>
+                  <h3 class="h5 mb-1">Sube los CVs o con&eacute;ctate a tu ATS</h3>
+                  <p class="text-muted mb-0">Suelta archivos PDF o sincroniza con Greenhouse, Lever, Teamtailor y m&aacute;s mediante API segura.</p>
+                </div>
+              </div>
+              <div class="upload-step-item d-flex gap-4 align-items-start">
+                <span class="upload-step-number">3</span>
+                <div>
+                  <h3 class="h5 mb-1">Comparte el shortlist y registra feedback</h3>
+                  <p class="text-muted mb-0">Recibe comentarios de hiring managers, exporta insights y alimenta tu playbook con aprendizajes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="small text-muted">&copy; <span id="year"></span> EVA &middot; Evaluaci&oacute;n de Vacantes Asistida</div>
+      <ul class="list-inline small mb-0">
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Privacidad</a></li>
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">T&eacute;rminos</a></li>
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Seguridad</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    (() => {
+      const fileInput = document.getElementById('cvFiles');
+      const dropzone = document.getElementById('uploadDropzone');
+      const fileList = document.getElementById('fileList');
+      const uploadButton = document.getElementById('startUpload');
+      const feedback = document.getElementById('uploadFeedback');
+      const sampleButton = document.getElementById('loadSample');
+      const supportsDataTransfer = typeof DataTransfer === 'function';
+      const supportsFileConstructor = typeof File === 'function';
+      const MAX_FILES = 20;
+      const MAX_SIZE_BYTES = 10 * 1024 * 1024;
+      let currentFiles = [];
+
+      const formatSize = (bytes) => {
+        if (bytes < 1024) return `${bytes} B`;
+        const kb = bytes / 1024;
+        if (kb < 1024) return `${kb.toFixed(kb > 10 ? 0 : 1)} KB`;
+        const mb = kb / 1024;
+        return `${mb.toFixed(mb > 10 ? 0 : 1)} MB`;
+      };
+
+      const updateButtonState = (count) => {
+        if (!uploadButton) return;
+        if (count > 0) {
+          uploadButton.removeAttribute('disabled');
+        } else {
+          uploadButton.setAttribute('disabled', 'disabled');
+        }
+      };
+
+      const showFeedback = (message) => {
+        if (!feedback) {
+          return;
+        }
+        if (message) {
+          feedback.textContent = message;
+          feedback.classList.remove('d-none');
+        } else {
+          feedback.classList.add('d-none');
+        }
+      };
+
+      const applyFiles = (filesArray) => {
+        currentFiles = filesArray;
+        if (fileInput && supportsDataTransfer) {
+          const dataTransfer = new DataTransfer();
+          filesArray.forEach((file) => dataTransfer.items.add(file));
+          fileInput.files = dataTransfer.files;
+        }
+        renderFiles(filesArray);
+      };
+
+      const renderFiles = (filesArray) => {
+        updateButtonState(filesArray.length);
+        if (!fileList) {
+          return;
+        }
+        fileList.innerHTML = '';
+        if (!filesArray.length) {
+          const emptyState = document.createElement('p');
+          emptyState.className = 'text-muted small mb-0';
+          emptyState.textContent = 'A&uacute;n no hay archivos seleccionados.';
+          fileList.appendChild(emptyState);
+          return;
+        }
+        const list = document.createElement('ul');
+        list.className = 'list-unstyled d-grid gap-3 mb-0';
+        filesArray.forEach((file) => {
+          const item = document.createElement('li');
+          item.className = 'upload-file-item d-flex align-items-center gap-3';
+
+          const name = document.createElement('span');
+          name.className = 'fw-medium text-truncate flex-grow-1';
+          name.title = file.name;
+          name.textContent = file.name;
+
+          const meta = document.createElement('span');
+          meta.className = 'badge rounded-pill text-bg-light border';
+          meta.textContent = formatSize(file.size);
+
+          item.appendChild(name);
+          item.appendChild(meta);
+          list.appendChild(item);
+        });
+        fileList.appendChild(list);
+      };
+
+      const sanitiseFiles = (fileListLike) => {
+        const incoming = Array.from(fileListLike || []);
+        if (!incoming.length) {
+          return { files: [], rejected: 0, trimmed: 0, oversized: 0 };
+        }
+
+        const pdfFiles = incoming.filter((file) => file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf'));
+        const rejected = incoming.length - pdfFiles.length;
+        const validSize = pdfFiles.filter((file) => file.size <= MAX_SIZE_BYTES);
+        const oversized = pdfFiles.length - validSize.length;
+        const limited = validSize.slice(0, MAX_FILES);
+        const trimmed = validSize.length - limited.length;
+
+        return {
+          files: limited,
+          rejected,
+          trimmed,
+          oversized,
+        };
+      };
+
+      const buildFeedbackMessage = ({ rejected, trimmed, oversized }) => {
+        const messages = [];
+        if (rejected > 0) {
+          messages.push(`Se ignoraron ${rejected} archivo(s) que no son PDF.`);
+        }
+        if (oversized > 0) {
+          messages.push(`Hay ${oversized} archivo(s) que superan 10 MB y no se cargaron.`);
+        }
+        if (trimmed > 0) {
+          messages.push(`Solo se muestran los primeros ${MAX_FILES} archivos.`);
+        }
+        return messages.join(' ');
+      };
+
+      if (fileInput) {
+        fileInput.addEventListener('change', () => {
+          const sanitised = sanitiseFiles(fileInput.files);
+          if (supportsDataTransfer) {
+            applyFiles(sanitised.files);
+          } else {
+            currentFiles = sanitised.files;
+            renderFiles(currentFiles);
+          }
+          showFeedback(buildFeedbackMessage(sanitised));
+        });
+      }
+
+      if (!dropzone) {
+        renderFiles(currentFiles);
+        return;
+      }
+
+      const toggleDragState = (active) => {
+        dropzone.classList.toggle('is-dragover', Boolean(active));
+      };
+
+      ['dragenter', 'dragover'].forEach((eventName) => {
+        dropzone.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          toggleDragState(true);
+        });
+      });
+
+      ['dragleave', 'dragend'].forEach((eventName) => {
+        dropzone.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          toggleDragState(false);
+        });
+      });
+
+      dropzone.addEventListener('drop', (event) => {
+        event.preventDefault();
+        toggleDragState(false);
+        const sanitised = sanitiseFiles(event.dataTransfer?.files);
+        if (!sanitised.files.length) {
+          showFeedback(buildFeedbackMessage(sanitised));
+          return;
+        }
+        if (supportsDataTransfer) {
+          applyFiles(sanitised.files);
+        } else {
+          currentFiles = sanitised.files;
+          renderFiles(currentFiles);
+        }
+        showFeedback(buildFeedbackMessage(sanitised));
+      });
+
+      dropzone.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          fileInput?.click();
+        }
+      });
+
+      if (sampleButton && supportsFileConstructor) {
+        sampleButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          const now = Date.now();
+          const samples = [
+            new File([''], 'CV - Maria Perez.pdf', { type: 'application/pdf', lastModified: now }),
+            new File([''], 'CV - Javier Lopez.pdf', { type: 'application/pdf', lastModified: now }),
+            new File([''], 'CV - Sofia Ramirez.pdf', { type: 'application/pdf', lastModified: now }),
+          ];
+          if (supportsDataTransfer) {
+            applyFiles(samples);
+          } else {
+            currentFiles = samples;
+            renderFiles(currentFiles);
+          }
+          showFeedback('Cargamos tres CVs de ejemplo para que explores la demo.');
+        });
+      }
+
+      renderFiles(currentFiles);
+    })();
+  </script>
+</body>
+</html>

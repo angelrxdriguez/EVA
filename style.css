@@ -62,6 +62,18 @@ a:hover {
 .navbar {
   backdrop-filter: blur(10px);
 }
+.navbar .nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+  background: rgba(13, 110, 253, 0.12);
+  border-radius: 999px;
+}
+
+.navbar .nav-link.active:hover,
+.navbar .nav-link.active:focus {
+  color: var(--primary-dark);
+}
+
 
 .brand-mark {
   width: 40px;
@@ -626,3 +638,209 @@ a:hover {
     transition: none !important;
   }
 }
+
+.demo-hero {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  background: linear-gradient(118deg, rgba(235, 243, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 55%, #ffffff 100%);
+}
+
+.demo-hero-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.demo-hero-card .badge {
+  letter-spacing: 0.08em;
+}
+
+.demo-hero-percent {
+  color: var(--primary);
+}
+
+.demo-hero-highlight {
+  align-items: flex-start;
+}
+
+.demo-hero-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.1);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+.demo-hero-footer .avatar-stack {
+  box-shadow: none;
+}
+
+.upload-card {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.upload-card-header .badge {
+  letter-spacing: 0.08em;
+}
+
+.upload-dropzone {
+  border: 2px dashed rgba(13, 110, 253, 0.3);
+  border-radius: 1.5rem;
+  padding: clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  background: rgba(13, 110, 253, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upload-dropzone-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.12);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+}
+
+.upload-dropzone strong {
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.upload-dropzone .btn {
+  pointer-events: none;
+}
+
+.upload-dropzone:hover {
+  border-color: var(--primary);
+  background: rgba(13, 110, 253, 0.1);
+}
+
+.upload-dropzone:focus-visible {
+  outline: 3px solid rgba(13, 110, 253, 0.45);
+  outline-offset: 6px;
+}
+
+.upload-dropzone.is-dragover {
+  border-color: var(--primary);
+  background: rgba(13, 110, 253, 0.12);
+  box-shadow: 0 18px 48px rgba(13, 110, 253, 0.18);
+}
+
+.upload-file-list {
+  min-height: 72px;
+  background: rgba(15, 23, 42, 0.035);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.upload-file-item {
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  padding: 0.8rem 1rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.upload-file-item .badge {
+  background: rgba(13, 110, 253, 0.12) !important;
+  color: var(--primary);
+  border-color: transparent;
+}
+
+.upload-feedback {
+  font-weight: 500;
+}
+
+.upload-highlights {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.upload-feature {
+  align-items: flex-start;
+}
+
+.upload-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, 0.08);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+
+.upload-steps {
+  margin-top: 0.5rem;
+}
+
+.upload-step-item {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+
+.upload-step-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.upload-step-number {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 12px 32px rgba(13, 110, 253, 0.35);
+}
+
+@media (max-width: 991.98px) {
+  .demo-hero {
+    padding-top: 6rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .upload-dropzone {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .upload-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .upload-dropzone {
+    padding: 2rem 1.5rem;
+  }
+
+  .upload-feature {
+    flex-direction: row;
+  }
+}
+
