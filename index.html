@@ -3,11 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
+  <title>EVA &middot; Evaluaci&oacute;n de Vacantes Asistida (IA)</title>
+=======
   <title>EVA &middot; Evaluaci&oacute;n de Vacantes Asistida con IA</title>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
+<<<<<<< HEAD
+  <!-- Google Fonts (cargar ANTES del CSS propio) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+  <link rel="apple-touch-icon" href="img/logo.png">
+  <meta name="theme-color" content="#0d6efd">
+
+  <meta name="description" content="EVA automatiza la preselecci&oacute;n de candidatos: sube CVs, pondera requisitos y recibe un shortlist con evidencias en minutos." />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Navegaci&oacute;n principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#hero">
+        <i class="bi bi-stars me-2"></i>EVA &middot; Evaluaci&oacute;n de Vacantes Asistida
+      </a>
+      <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegaci&oacute;n">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">C&oacute;mo funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subida">Subir CVs</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/demo.html">Demo</a></li>
+=======
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
@@ -36,6 +73,7 @@
           <li class="nav-item"><a class="nav-link" href="#como-funciona">C&oacute;mo funciona</a></li>
           <li class="nav-item"><a class="nav-link" href="#subida">Subida inteligente</a></li>
           <li class="nav-item"><a class="nav-link" href="demo.html">Demo</a></li>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
           <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item ms-lg-3">
@@ -46,6 +84,275 @@
     </div>
   </nav>
 
+<<<<<<< HEAD
+  <!-- HERO -->
+  <header id="hero" class="hero position-relative overflow-hidden" aria-label="Secci&oacute;n principal">
+    <span class="hero-overlay" aria-hidden="true"></span>
+    <div class="container position-relative">
+      <div class="row align-items-center py-5 py-md-6">
+        <div class="col-lg-6">
+          <div class="hero-copy anim-fade-up">
+            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill mb-3">
+              <i class="bi bi-lightning-charge-fill me-1"></i>MVP listo para escalar
+            </span>
+            <h1 class="display-5 fw-extrabold lh-tight mb-3">
+              Preselecci&oacute;n de candidatos <span class="hero-underline">en minutos</span> con IA
+            </h1>
+            <p class="lead text-body">
+              Describe el puesto, sube CVs en PDF y recibe un <strong>shortlist priorizado</strong> con evidencias claras, modo ciego opcional y seguimiento auditable.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a class="btn btn-primary btn-lg" href="#subida">
+                <i class="bi bi-cloud-arrow-up me-2"></i>Subir CVs
+              </a>
+              <a class="btn btn-outline-primary btn-lg" href="html/demo.html">
+                <i class="bi bi-eye me-2"></i>Ver demo
+              </a>
+            </div>
+            <ul class="list-unstyled d-flex flex-wrap gap-4 mt-4 text-body">
+              <li><i class="bi bi-shield-lock me-2 text-primary"></i>RGPD ready</li>
+              <li><i class="bi bi-check2-circle me-2 text-primary"></i>Explicabilidad total</li>
+              <li><i class="bi bi-speedometer2 me-2 text-primary"></i>Menos de 5&nbsp;min</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="hero-showcase position-relative">
+            <div class="hero-dashboard anim-fade-up delay-2" aria-hidden="true">
+              <div class="hero-dashboard-header">
+                <span class="hero-dashboard-badge">
+                  <i class="bi bi-kanban me-1"></i>Shortlist activo
+                </span>
+                <span class="hero-dashboard-date">Actualizado hace 3&nbsp;min</span>
+              </div>
+              <ul class="hero-dashboard-list list-unstyled mb-0">
+                <li class="hero-dashboard-item">
+                  <span class="hero-avatar">PG</span>
+                  <div class="hero-dashboard-copy">
+                    <strong>Patricia G&oacute;mez</strong>
+                    <small>Full-Stack &middot; 92/100</small>
+                  </div>
+                  <span class="hero-tag text-bg-primary-subtle">Match alto</span>
+                </li>
+                <li class="hero-dashboard-item">
+                  <span class="hero-avatar">DS</span>
+                  <div class="hero-dashboard-copy">
+                    <strong>Diego Santos</strong>
+                    <small>Back-End &middot; 84/100</small>
+                  </div>
+                  <span class="hero-tag text-bg-primary-subtle">Listo entrevista</span>
+                </li>
+                <li class="hero-dashboard-item">
+                  <span class="hero-avatar">AF</span>
+                  <div class="hero-dashboard-copy">
+                    <strong>Ana Fern&aacute;ndez</strong>
+                    <small>Front-End &middot; 79/100</small>
+                  </div>
+                  <span class="hero-tag text-bg-primary-subtle">Perfil creativo</span>
+                </li>
+              </ul>
+            </div>
+            <div class="hero-insight anim-fade-up delay-3">
+              <div class="hero-insight-icon">
+                <i class="bi bi-magic"></i>
+              </div>
+              <div>
+                <h3 class="h6 mb-1 text-primary">Insights autom&aacute;ticos</h3>
+                <p class="small text-body-secondary mb-0">
+                  EVA destaca logros clave y genera evidencias descargables por candidato.
+                </p>
+              </div>
+            </div>
+            <div class="hero-orbit hero-orbit-1"></div>
+            <div class="hero-orbit hero-orbit-2"></div>
+            <div class="hero-pill anim-fade-up delay-4">
+              <img src="img/logo.png" alt="Logotipo EVA">
+              <span>+54&#37; velocidad en el screening</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-6 col-md-4">
+          <div class="metric border rounded-4 p-4 anim-fade-up delay-1">
+            <div class="h2 text-primary mb-0">+200</div>
+            <small class="text-body-secondary">CVs analizados por lote</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="metric border rounded-4 p-4 anim-fade-up delay-2">
+            <div class="h2 text-primary mb-0">5&nbsp;min</div>
+            <small class="text-body-secondary">de criba inicial media</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="metric border rounded-4 p-4 anim-fade-up delay-3">
+            <div class="h2 text-primary mb-0">100&#37;</div>
+            <small class="text-body-secondary">explicabilidad visible</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- IMPACTO -->
+  <section id="impacto" class="py-6 bg-soft overflow-hidden">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="section-intro anim-fade-up">
+            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill mb-3">
+              <i class="bi bi-stars me-1"></i> Selecci&oacute;n asistida 2024
+            </span>
+            <h2 class="fw-bold mb-3">Visual, humano y accionable</h2>
+            <p class="text-body">
+              EVA convierte miles de datos de CVs en paneles claros. Identifica coincidencias reales, resalta evidencias y acelera la conversaci&oacute;n con las personas adecuadas.
+            </p>
+            <div class="d-flex flex-column gap-3 mt-4">
+              <div class="feature-line">
+                <div class="feature-icon"><i class="bi bi-sliders"></i></div>
+                <div>
+                  <h3 class="h6 mb-1 text-primary">Brief inteligente</h3>
+                  <p class="mb-0 text-body-secondary">Plantillas reutilizables y ponderaci&oacute;n din&aacute;mica por seniority.</p>
+                </div>
+              </div>
+              <div class="feature-line">
+                <div class="feature-icon"><i class="bi bi-chat-heart"></i></div>
+                <div>
+                  <h3 class="h6 mb-1 text-primary">Experiencia candidata</h3>
+                  <p class="mb-0 text-body-secondary">Feedback accionable y seguimiento cuidadoso desde el primer filtro.</p>
+                </div>
+              </div>
+              <div class="feature-line">
+                <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                <div>
+                  <h3 class="h6 mb-1 text-primary">Confiable y auditable</h3>
+                  <p class="mb-0 text-body-secondary">Descarga reportes con evidencias para equipos legales y de compliance.</p>
+                </div>
+              </div>
+            </div>
+            <div class="stat-pill anim-fade-up delay-1 mt-4">
+              <strong class="text-primary">+40&nbsp;h</strong>
+              <span class="text-body-secondary">ahorradas al mes en talento</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="impact-grid">
+            <div class="impact-card accent-blue anim-fade-up delay-1">
+              <span class="impact-icon"><i class="bi bi-diagram-3"></i></span>
+              <h3 class="h5 mb-2 text-white">Mapeo de skills</h3>
+              <p class="mb-0">Detecci&oacute;n sem&aacute;ntica de competencias, sin depender del formato del CV.</p>
+            </div>
+            <div class="impact-card accent-purple anim-fade-up delay-2">
+              <span class="impact-icon"><i class="bi bi-eyeglasses"></i></span>
+              <h3 class="h5 mb-2 text-white">Modo ciego</h3>
+              <p class="mb-0">Oculta datos sensibles para minimizar sesgos inconscientes en la criba.</p>
+            </div>
+            <div class="impact-card accent-green anim-fade-up delay-3">
+              <span class="impact-icon"><i class="bi bi-pie-chart"></i></span>
+              <h3 class="h5 mb-2 text-white">Panel ejecutivo</h3>
+              <p class="mb-0">KPIs live: time-to-shortlist, conversiones por canal y motivaciones de descarte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C&Oacute;MO FUNCIONA -->
+  <section id="como-funciona" class="py-6 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">C&oacute;mo funciona</h2>
+        <p class="text-body">Cuatro pasos para pasar de una pila de CVs a un shortlist accionable.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100 anim-fade-up">
+            <span class="step-index">1</span>
+            <div class="step-icon"><i class="bi bi-pencil-square"></i></div>
+            <h3 class="h5">Define la oferta</h3>
+            <p class="mb-0">Describe el puesto, agrega must-have y nice-to-have. Ajusta pesos seg&uacute;n prioridad.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100 anim-fade-up delay-1">
+            <span class="step-index">2</span>
+            <div class="step-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+            <h3 class="h5">Sube los CVs</h3>
+            <p class="mb-0">Arrastra PDFs (o ZIP). EVA deduplica y normaliza la informaci&oacute;n en segundos.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100 anim-fade-up delay-2">
+            <span class="step-index">3</span>
+            <div class="step-icon"><i class="bi bi-cpu"></i></div>
+            <h3 class="h5">IA punt&uacute;a</h3>
+            <p class="mb-0">An&aacute;lisis sem&aacute;ntico, contraste con requisitos y detecci&oacute;n de logros clave.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card h-100 anim-fade-up delay-3">
+            <span class="step-index">4</span>
+            <div class="step-icon"><i class="bi bi-list-check"></i></div>
+            <h3 class="h5">Shortlist con evidencias</h3>
+            <p class="mb-0">Recibe explicaciones claras, fragmentos del CV y recomendaci&oacute;n de acci&oacute;n.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBIDA DE CVS -->
+  <section id="subida" class="py-6 bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Sube tus CVs</h2>
+          <p class="text-body">Zona de subida (demo). En el producto real, aqu&iacute; se orquesta la ingest&oacute;n segura y el enrutado a tu IA.</p>
+          <form class="upload-box border-dashed rounded-4 p-4 bg-white" aria-label="Formulario de subida de CVs (demo)">
+            <div class="text-center">
+              <i class="bi bi-file-earmark-arrow-up-fill display-5 text-primary d-block mb-2"></i>
+              <p class="mb-2"><strong>Arrastra y suelta</strong> tus PDFs aqu&iacute;</p>
+              <p class="text-body-secondary small mb-3">o haz clic para seleccionar archivos</p>
+              <label class="btn btn-outline-primary mt-2">
+                <input type="file" class="visually-hidden" accept=".pdf" multiple>
+                Seleccionar archivos
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="feature-card p-4 anim-fade-up">
+                <div class="feature-icon mb-3"><i class="bi bi-hdd-network"></i></div>
+                <h3 class="h6 text-primary">Ingesta segura</h3>
+                <p class="small text-body-secondary mb-0">Opci&oacute;n on-premise o nube europea con cifrado autom&aacute;tico.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-card p-4 anim-fade-up delay-1">
+                <div class="feature-icon mb-3"><i class="bi bi-gear-wide-connected"></i></div>
+                <h3 class="h6 text-primary">Workflows</h3>
+                <p class="small text-body-secondary mb-0">Webhooks, integraci&oacute;n ATS y aprobaciones internas.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-card p-4 anim-fade-up delay-2">
+                <div class="feature-icon mb-3"><i class="bi bi-robot"></i></div>
+                <h3 class="h6 text-primary">Clasificaci&oacute;n autom&aacute;tica</h3>
+                <p class="small text-body-secondary mb-0">Detecci&oacute;n de roles similares y sugerencias de pipeline.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-card p-4 anim-fade-up delay-3">
+                <div class="feature-icon mb-3"><i class="bi bi-clipboard-check"></i></div>
+                <h3 class="h6 text-primary">Cumplimiento</h3>
+                <p class="small text-body-secondary mb-0">Pol&iacute;ticas de retenci&oacute;n y borrado configurables.</p>
+=======
   <header class="hero position-relative overflow-hidden">
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
@@ -130,12 +437,194 @@
                     <span class="candidate-score">91</span>
                   </li>
                 </ul>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
               </div>
             </div>
             <div class="insight-pill shadow"><i class="bi bi-bar-chart-line me-2"></i>Top skills detectadas: React, Liderazgo, Arquitectura escalable</div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo" class="py-6 bg-white">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Demo de ranking</h2>
+        <p class="text-body">Ejemplo est&aacute;tico de c&oacute;mo se ve el top de candidatos (datos ficticios).</p>
+      </div>
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5">
+          <div class="demo-media anim-fade-up">
+            <video class="w-100 rounded-4" src="video/video.mp4" autoplay muted loop playsinline></video>
+            <div class="demo-media-badge">
+              <i class="bi bi-play-fill me-2"></i>Flujo real en 60&nbsp;seg
+            </div>
+          </div>
+          <ul class="list-unstyled mt-4 text-body">
+            <li class="info-line">
+              <i class="bi bi-patch-check-fill text-primary"></i>
+              <span>Ranking con evidencias rastreables por requisito.</span>
+            </li>
+            <li class="info-line">
+              <i class="bi bi-eye-slash-fill text-primary"></i>
+              <span>Modo ciego para ocultar datos sensibles durante la criba.</span>
+            </li>
+            <li class="info-line">
+              <i class="bi bi-lightbulb-fill text-primary"></i>
+              <span>Alertas autom&aacute;ticas de coincidencias sobresalientes.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <div class="table-responsive rounded-4 border bg-white anim-fade-up delay-2">
+            <table class="table align-middle mb-0">
+              <thead class="table-primary">
+                <tr>
+                  <th>Pos.</th>
+                  <th>Candidato</th>
+                  <th>Puntuaci&oacute;n</th>
+                  <th>Must-have</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank-dot bg-primary"></span>1</td>
+                  <td>
+                    <strong>Patricia G&oacute;mez</strong><br>
+                    <small class="text-body-secondary">Full-Stack &middot; 5 a&ntilde;os</small>
+                  </td>
+                  <td style="min-width:220px;">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="progress flex-grow-1" style="height:8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 92%;" aria-label="Puntuaci&oacute;n 92&#37;"></div>
+                      </div>
+                      <span class="fw-semibold text-primary">92</span>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">JavaScript</span>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">Node/Next</span>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">SQL</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#evidenciaModal" aria-label="Ver evidencias de Patricia">
+                      <i class="bi bi-search"></i> Ver evidencias
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="rank-dot bg-primary"></span>2</td>
+                  <td>
+                    <strong>Diego Santos</strong><br>
+                    <small class="text-body-secondary">Back-End &middot; 6 a&ntilde;os</small>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="progress flex-grow-1" style="height:8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 84%;" aria-label="Puntuaci&oacute;n 84&#37;"></div>
+                      </div>
+                      <span class="fw-semibold text-primary">84</span>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">Node</span>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">SQL</span>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">Docker</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#evidenciaModal">
+                      <i class="bi bi-search"></i> Ver evidencias
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="rank-dot bg-primary"></span>3</td>
+                  <td>
+                    <strong>Ana Fern&aacute;ndez</strong><br>
+                    <small class="text-body-secondary">Front-End &middot; 4 a&ntilde;os</small>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="progress flex-grow-1" style="height:8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 79%;" aria-label="Puntuaci&oacute;n 79&#37;"></div>
+                      </div>
+                      <span class="fw-semibold text-primary">79</span>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">JavaScript</span>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">React</span>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-1">UI</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#evidenciaModal">
+                      <i class="bi bi-search"></i> Ver evidencias
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="evidenciaModal" tabindex="-1" aria-labelledby="evidenciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <div class="modal-content rounded-4">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-primary" id="evidenciaModalLabel"><i class="bi bi-journal-text me-2"></i>Evidencias del candidato</h5>
+              <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p class="mb-2 text-body"><strong>Requisitos cumplidos:</strong> JavaScript, Node, SQL</p>
+              <p class="mb-3 text-body"><strong>Fragmentos del CV:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Lider&oacute; la migraci&oacute;n a <strong>Next.js</strong> con SSR en 2023.</li>
+                <li class="list-group-item">Dise&ntilde;&oacute; y optimiz&oacute; consultas <strong>SQL</strong> para reporting.</li>
+                <li class="list-group-item">APIs en <strong>Node.js</strong> con testing y CI/CD completos.</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="py-6 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Beneficios de EVA</h2>
+        <p class="text-body">Pensado para equipos de talento que necesitan velocidad sin perder calidad.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="benefit h-100 anim-fade-up">
+            <div class="benefit-icon"><i class="bi bi-eye"></i></div>
+            <h3 class="h5">Transparente</h3>
+            <p class="mb-0 text-body">Explicaciones legibles con citas del CV para cada decisi&oacute;n.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="benefit h-100 anim-fade-up delay-1">
+            <div class="benefit-icon"><i class="bi bi-shield-lock"></i></div>
+            <h3 class="h5">Justa</h3>
+            <p class="mb-0 text-body">Evaluaci&oacute;n por requisitos, controles de sesgo y auditor&iacute;a.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="benefit h-100 anim-fade-up delay-2">
+            <div class="benefit-icon"><i class="bi bi-alarm"></i></div>
+            <h3 class="h5">Ahorra tiempo</h3>
+            <p class="mb-0 text-body">De horas a minutos en la criba inicial de cada oferta.</p>
+=======
     </div>
   </header>
   <section class="brand-strip border-bottom">
@@ -199,12 +688,59 @@
               <li><i class="bi bi-check-circle me-2 text-primary"></i>Explicaciones en lenguaje natural</li>
               <li><i class="bi bi-check-circle me-2 text-primary"></i>Exportable a PDF, Notion o ATS</li>
             </ul>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
           </div>
         </div>
       </div>
     </div>
   </section>
 
+<<<<<<< HEAD
+  <!-- CASOS DE &Eacute;XITO -->
+  <section id="casos" class="py-6 bg-white">
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-2">Casos de &eacute;xito recientes</h2>
+          <p class="text-body mb-0">Equipos tech, consultoras y scale-ups ya aceleran sus shortlist con EVA.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-outline-primary mt-3 mt-lg-0" href="#contacto">
+            <i class="bi bi-chat-dots me-2"></i>Solicitar demo guiada
+          </a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <article class="case-card accent-blue anim-fade-up">
+            <div class="case-card-body">
+              <div class="case-icon"><i class="bi bi-rocket-takeoff"></i></div>
+              <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Scale-up SaaS</span>
+              <h3 class="h5 text-white mb-2">Time-to-hire -45&#37;</h3>
+              <p class="case-text">Automatizaron filtros, ponderaron competencias y preparan entrevistas en un click.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="case-card accent-purple anim-fade-up delay-1">
+            <div class="case-card-body">
+              <div class="case-icon"><i class="bi bi-people-fill"></i></div>
+              <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Consultora IT</span>
+              <h3 class="h5 text-white mb-2">+30 shortlist/mes</h3>
+              <p class="case-text">Centralizaron CVs, descubrieron skills ocultas y compartieron insights con clientes.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="case-card accent-green anim-fade-up delay-2">
+            <div class="case-card-body">
+              <div class="case-icon"><i class="bi bi-shield-lock-fill"></i></div>
+              <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Fintech</span>
+              <h3 class="h5 text-white mb-2">Compliance garantizado</h3>
+              <p class="case-text">Modo ciego obligatorio, auditor&iacute;as descargables y trazabilidad por candidato.</p>
+            </div>
+          </article>
+=======
   <section id="subida" class="section py-6 bg-soft">
     <div class="container">
       <div class="row g-5 align-items-center">
@@ -259,11 +795,16 @@
             <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">API ready</span>
             <span class="badge rounded-pill bg-light border ms-2 text-info">Integraciones con Greenhouse, Lever, Personio</span>
           </div>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
         </div>
       </div>
     </div>
   </section>
 
+<<<<<<< HEAD
+  <!-- PRECIOS -->
+  <section id="precios" class="py-6 bg-white">
+=======
   <section id="demo" class="section py-6">
     <div class="container">
       <div class="row g-5 align-items-center">
@@ -375,12 +916,51 @@
   </section>
 
   <section id="beneficios" class="section py-6 bg-soft">
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Todo lo que necesitas para una criba moderna</h2>
         <p class="section-lead text-muted mx-auto" style="max-width:620px;">EVA combina IA, seguridad y experiencia de recruiter para que la preselecci&oacute;n sea transparente y accionable.</p>
       </div>
       <div class="row g-4">
+<<<<<<< HEAD
+        <div class="col-md-4">
+          <div class="price-card h-100 anim-fade-up">
+            <h3 class="h5 text-primary">Gratis</h3>
+            <div class="display-6 fw-bold mb-2">0&euro;</div>
+            <ul class="list-unstyled text-body">
+              <li><i class="bi bi-check2 text-primary me-2"></i>Hasta 50 CVs/mes</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>1 flujo automatizado</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Soporte comunitario</li>
+            </ul>
+            <a class="btn btn-outline-primary w-100 mt-3" href="#contacto">Probar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="price-card h-100 featured anim-fade-up delay-1">
+            <div class="ribbon">Recomendado</div>
+            <h3 class="h5 text-primary">Pro</h3>
+            <div class="display-6 fw-bold mb-2">19&euro;</div>
+            <ul class="list-unstyled text-body">
+              <li><i class="bi bi-check2 text-primary me-2"></i>CVs ilimitados</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Integraciones ATS</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Modo ciego + auditor&iacute;as</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Soporte dedicado</li>
+            </ul>
+            <a class="btn btn-primary w-100 mt-3" href="#contacto">Empezar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="price-card h-100 anim-fade-up delay-2">
+            <h3 class="h5 text-primary">Empresa</h3>
+            <div class="display-6 fw-bold mb-2">A medida</div>
+            <ul class="list-unstyled text-body">
+              <li><i class="bi bi-check2 text-primary me-2"></i>Integraciones (ATS, SSO)</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Entornos dedicados</li>
+              <li><i class="bi bi-check2 text-primary me-2"></i>Soporte 24/7</li>
+            </ul>
+            <a class="btn btn-outline-primary w-100 mt-3" href="#contacto">Hablar con ventas</a>
+=======
         <div class="col-md-6 col-lg-3">
           <div class="benefit-card h-100">
             <div class="benefit-icon"><i class="bi bi-clipboard-data"></i></div>
@@ -407,11 +987,61 @@
             <div class="benefit-icon"><i class="bi bi-cloud-check"></i></div>
             <h3 class="h6">Integraciones</h3>
             <p class="text-muted mb-0">Sincroniza con tu ATS, Slack o correo para distribuir shortlist y feedback.</p>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
           </div>
         </div>
       </div>
     </div>
   </section>
+<<<<<<< HEAD
+
+  <!-- FAQ -->
+  <section id="faq" class="py-6 bg-soft">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <h2 class="fw-bold mb-3">Preguntas frecuentes</h2>
+          <p class="text-body">Resolvemos dudas comunes antes de que pruebes EVA. Si necesitas algo m&aacute;s, escr&iacute;benos.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                  &iquest;D&oacute;nde se guardan los CVs?
+                </button>
+              </h2>
+              <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  En la demo no se sube nada. En el producto puedes almacenar localmente o en la nube (UE) con pol&iacute;ticas claras de retenci&oacute;n y borrado.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                  &iquest;C&oacute;mo evita sesgos?
+                </button>
+              </h2>
+              <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Revisi&oacute;n ciega, enfoque en requisitos y auditor&iacute;a de decisiones con explicaciones y evidencias descargables.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                  &iquest;Necesito IA de pago?
+                </button>
+              </h2>
+              <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Puedes empezar con l&oacute;gica b&aacute;sica; cuando quieras mayor precisi&oacute;n activas un modelo avanzado (Gemini, OpenAI, etc.).
+                </div>
+              </div>
+            </div>
+=======
   <section id="precios" class="section py-6">
     <div class="container">
       <div class="row align-items-end g-4 mb-4">
@@ -461,6 +1091,7 @@
               <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Consultor&iacute;a de adopci&oacute;n</li>
             </ul>
             <a class="btn btn-outline-primary w-100" href="#contacto">Hablar con ventas</a>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
           </div>
         </div>
       </div>
@@ -470,6 +1101,24 @@
   <section id="faq" class="section py-6 bg-soft">
     <div class="container">
       <div class="row g-5">
+<<<<<<< HEAD
+        <div class="col-lg-6">
+          <h2 class="fw-bold">&iquest;Hablamos?</h2>
+          <p class="text-body">Cu&eacute;ntanos tu caso y te ayudamos a adaptar la criba a tu flujo de contrataci&oacute;n.</p>
+          <form class="contact-card anim-fade-up">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="contacto-nombre">Nombre</label>
+                <input id="contacto-nombre" type="text" class="form-control" placeholder="Tu nombre">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="contacto-email">Email</label>
+                <input id="contacto-email" type="email" class="form-control" placeholder="tu@email.com">
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="contacto-mensaje">Mensaje</label>
+                <textarea id="contacto-mensaje" class="form-control" rows="4" placeholder="Cu&eacute;ntanos brevemente tu necesidad..."></textarea>
+=======
         <div class="col-lg-5">
           <h2 class="section-title">Preguntas frecuentes</h2>
           <p class="section-lead text-muted">Transparencia ante todo: as&iacute; trabajamos con datos, IA y tus equipos.</p>
@@ -562,6 +1211,7 @@
               <div class="col-12">
                 <label class="form-label">Mensaje</label>
                 <textarea class="form-control" rows="4" placeholder="Cu&eacute;ntanos el reto que quieres resolver."></textarea>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
               </div>
               <div class="col-12">
                 <label class="form-check small text-muted"><input class="form-check-input me-2" type="checkbox" />Acepto la pol&iacute;tica de privacidad y el tratamiento de datos.</label>
@@ -572,22 +1222,56 @@
             </div>
           </form>
         </div>
+<<<<<<< HEAD
+        <div class="col-lg-6">
+          <div class="map-placeholder rounded-4 p-4 anim-fade-up delay-1">
+            <h3 class="h6 text-primary">Ubicaci&oacute;n</h3>
+            <p class="mb-0 text-body">Remoto &middot; Espa&ntilde;a</p>
+            <hr>
+            <p class="small text-body-secondary mb-1">
+              Esta es una secci&oacute;n de ejemplo. Aqu&iacute; podr&iacute;as incrustar un mapa o tus datos de contacto ampliados.
+            </p>
+            <div class="d-flex gap-3 mt-3">
+              <a class="btn btn-outline-primary btn-sm" href="#"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+              <a class="btn btn-outline-primary btn-sm" href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+              <a class="btn btn-outline-primary btn-sm" href="#"><i class="bi bi-envelope me-1"></i>Email</a>
+            </div>
+          </div>
+        </div>
+=======
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
       </div>
     </div>
   </section>
 
   <footer class="footer py-4 bg-white border-top">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+<<<<<<< HEAD
+      <div class="small text-body-secondary">&copy; <span id="year"></span> IA de RRHH &middot; Hecho con &lt;3</div>
+      <ul class="list-inline m-0 small">
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Privacidad</a></li>
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">T&eacute;rminos</a></li>
+        <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Contacto</a></li>
+=======
       <div class="small text-muted">&copy; <span id="year"></span> EVA &middot; Evaluaci&oacute;n de Vacantes Asistida</div>
       <ul class="list-inline small mb-0">
         <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Privacidad</a></li>
         <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">T&eacute;rminos</a></li>
         <li class="list-inline-item"><a class="link-primary text-decoration-none" href="#">Seguridad</a></li>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
       </ul>
     </div>
   </footer>
 
+<<<<<<< HEAD
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+=======
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+>>>>>>> e9059704b020c9b2f1eb7ecd2bb5fcadd336134a
 </body>
 </html>
